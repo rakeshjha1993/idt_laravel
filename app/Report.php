@@ -12,5 +12,5 @@ class Report extends Model
     *
     * @var array
     */
-    protected $fillable = ['reportTitle','reportDescription','file_url','tenure_from','tenure_to','city'];
+    protected $fillable = ['reportTitle','reportDescription','file_url','tenure_from','tenure_to','tenure_year','city'];
 }

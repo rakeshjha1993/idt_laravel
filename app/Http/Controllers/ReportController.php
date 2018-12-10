@@ -33,16 +33,16 @@ class ReportController extends Controller {
   public function createForm(){
     $months = ['Jan','Feb','March','Apr','May','Jun','July','Aug','Sept','Oct','Nov','Dec'];
     $cities = DB::table('cities')->get();
-
-    return view('reports.reportForm',['months' => $months,'cities' => $cities]);
+    
+    return view('reports.reportForm',['months' => $months,'cities' => json_code($cities)]);
   }
 
   public function create(Request $request)
     {
 
-        // var_dump($request->file('report'));
-         $path = $request->file('report')->store('UploadedReports');
-        // var_dump($request->file);
+        // var_dump(gettype($request->tenure_year));
+      //  var_dump($request->all());
+        $path = $request->file('report')->store('public/UploadedReports');
         $report = new Report($request->all());
         $report->user_id = Auth::id();
         $report->file_url = $path;

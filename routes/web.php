@@ -27,3 +27,5 @@ Auth::routes();
 Route::get('/reports','ReportController@index') -> name('report');
 Route::get('/reports/create', 'ReportController@createForm') -> name('report.create');
 Route::post('/reports/create', 'ReportController@create') ->name('report.create');
+Route::get('/search/{search_term}', 'SearchController@search') ->name('Search');
+Route::get('/methodology', 'MethodologyController@index') ->name('methodology');

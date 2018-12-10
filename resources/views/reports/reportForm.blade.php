@@ -6,7 +6,7 @@
         <div class="row">
           <div class="form-group col-md-8">
             {!! Form::label('reportTitle','ReportTitle',array('id'=>'report_title_label','class'=>'')) !!}
-            {!! Form::text('reportTitle','ReportTitle',array('id'=>'report_title','class'=>'form-control', 'placeholder' => 'Enter Description')) !!}
+            {!! Form::text('reportTitle','',array('id'=>'report_title','class'=>'form-control', 'placeholder' => 'Enter Report Title')) !!}
           </div>
           <div class="form-group col-md-4">
             {!! Form::label('Selectedcity','Select city',array('id'=>'Selectedcity_label','class'=>'')) !!}
@@ -49,7 +49,7 @@
         <div class="row">
           <div class="form-group col-md-12">
             {!! Form::label('reportDescription','reportDescription',array('id'=>'report_description_label','class'=>'form-group')) !!}
-            {!! Form::textarea('reportDescription','reportDescription',array('id'=>'report_description','class'=>'form-control', 'placeholder' => 'Enter Description')) !!}
+            {!! Form::textarea('reportDescription','',array('id'=>'report_description','class'=>'form-control', 'placeholder' => 'Enter Description')) !!}
           </div>
         </div>
         <div class="row">

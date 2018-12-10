@@ -39,7 +39,7 @@ return [
     |
     */
 
-    'debug' => env('APP_DEBUG', false),
+    'debug' => env('APP_DEBUG', TRUE),
 
     /*
     |--------------------------------------------------------------------------
@@ -178,6 +178,7 @@ return [
 
       //custom providers
       Collective\Html\HtmlServiceProvider::class,
+      Unisharp\Ckeditor\ServiceProvider::class,
     ],
 
     /*
