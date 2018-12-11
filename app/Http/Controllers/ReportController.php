@@ -20,8 +20,9 @@ class ReportController extends Controller {
    */
   public function __construct()
   {
-      $this->middleware('auth');
+      $this->middleware('auth')->except(['index']);
   }
+
 
   public function index()
     {
@@ -29,12 +30,11 @@ class ReportController extends Controller {
       return view('reports.index', ['reports' => $reports]);
     }
 
-
   public function createForm(){
     $months = ['Jan','Feb','March','Apr','May','Jun','July','Aug','Sept','Oct','Nov','Dec'];
     $cities = DB::table('cities')->get();
-    
-    return view('reports.reportForm',['months' => $months,'cities' => json_code($cities)]);
+    //var_dump($cities);
+    return view('reports.reportForm',['months' => $months,'cities' => $cities]);
   }
 
   public function create(Request $request)

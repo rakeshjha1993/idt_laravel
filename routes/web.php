@@ -29,3 +29,5 @@ Route::get('/reports/create', 'ReportController@createForm') -> name('report.cre
 Route::post('/reports/create', 'ReportController@create') ->name('report.create');
 Route::get('/search/{search_term}', 'SearchController@search') ->name('Search');
 Route::get('/methodology', 'MethodologyController@index') ->name('methodology');
+Route::get('/methodology/create', 'MethodologyController@createForm') ->name('methodology.createForm');
+Route::post('/methodology/create', 'MethodologyController@create') ->name('methodology.create');

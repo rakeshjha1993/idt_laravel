@@ -14,7 +14,7 @@
               @if ($cities->count())
 
                    @foreach($cities as $city)
-                       <option value="{{ $city->name }}" >{{ $city->name }}</option>
+                       <option value="{{ $city->id}}" >{{ $city->city }}</option>
                     @endforeach
                @endif
             </select>
